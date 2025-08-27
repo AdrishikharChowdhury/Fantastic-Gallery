@@ -32,7 +32,7 @@ A React-based web app to generate and display a dynamic gallery of random images
 
 ## Demo
 
-> _Insert screenshot or link to live demo here_
+ [Chhobighor]{}
 
 ---
 
@@ -156,29 +156,3 @@ This project is released under the MIT License.
 For questions, feel free to reach out.
 
 ---
-
-*Thank you for checking out Fantastic Pictures Gallery!*
-```
-
-If you want, I can help generate the markdown file directly or include screenshots and badges too.
-<span style="display:none">[^1][^2][^3][^4][^5][^6][^7][^8][^9]</span>
-
-<div style="text-align: center">⁂</div>
-
-[^1]: https://reactjsexample.com/an-application-that-takes-basic-information-about-the-users-project-as-an-input-and-generates-a-readme-md-file-which-the-user-can-upload-directly-in-t/
-
-[^2]: https://dev.to/documatic/how-to-write-an-awesome-readme-cfl
-
-[^3]: https://www.makeareadme.com
-
-[^4]: https://github.com/evelinsteiger/README-template
-
-[^5]: https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4
-
-[^6]: https://www.reddit.com/r/reactjs/comments/cjimv5/excellent_readme_examples/
-
-[^7]: https://gitlab.com/gitlab-org/project-templates/react/-/blob/main/README.md
-
-[^8]: https://sourcegraph.com/github.com/facebook/create-react-app/-/blob/README.md
-
-[^9]: https://readme.so
