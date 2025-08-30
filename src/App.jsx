@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Navbar from './components/Navbar'
 import Gallery from './components/Gallery'
 import axios from 'axios'
+import { motion } from 'motion/react'
 
 const App = () => {
 
@@ -41,7 +42,12 @@ const App = () => {
         value={limit}
         min="1"
         className='border-4 p-4 rounded-full text-2xl bg-white lg:w-1/2 w-3/4'/>
-        <button onClick={generateImages} className='bg-emerald-400 p-4 text-xl text-white font-bold rounded-full lg:w-1/7 w-3/4'>{limit}x Clicks</button>
+        <motion.button 
+        onClick={generateImages} 
+        className='bg-emerald-400 p-4 text-xl text-white font-bold rounded-full lg:w-1/7 w-3/4 cursor-pointer'
+        >
+          {limit}x Clicks
+        </motion.button>
     </form>
       <Gallery data={data} />
     </>
