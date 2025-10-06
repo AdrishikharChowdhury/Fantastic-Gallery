@@ -1,26 +1,77 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import cardPic from '../assets/cardpic.jpg'
 
 const Greet = () => {
   return (
-      <div className="bg-white max-w-80 min-h-80 rounded-lg shadow-2xl border-2">
-        <div className="flex p-2 gap-1">
-          <div className="">
-            <span className="bg-blue-500 inline-block center w-3 h-3 rounded-full"></span>
-          </div>
-          <div className="circle">
-            <span className="bg-purple-500 inline-block center w-3 h-3 rounded-full"></span>
-          </div>
-          <div className="circle">
-            <span className="bg-pink-500 box inline-block center w-3 h-3 rounded-full"></span>
-          </div>
-        </div>
-        <div className="card__content flex flex-col p-5 gap-5 justify-center items-center w-full h-80">
-          <p className='text-2xl'>Fantastic Gallery</p>
-          <p className='text-lg break-words text-center'>Generate Pictures in a Single Click</p>
+    <StyledWrapper>
+      <div className="card">
+        <img src={cardPic} alt=""  className='h-full'/>
+        <div className="card__content flex flex-col justify-center gap-5 p-15">
+          <p className="card__title text-[#333] text-3xl">Fantastic Gallery</p>
+          <p className="card__description text-[#777] text-xl">A website to generate and display a dynamic gallery of random images fetched from the Picsum Photos API.</p>
         </div>
       </div>
-
-  )
+    </StyledWrapper>
+  );
 }
 
-export default Greet
+const StyledWrapper = styled.div`
+  .card {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  }
+
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+
+  .card__title {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .card:hover svg {
+    scale: 0;
+  }
+
+  .card__description {
+    margin: 10px 0 0;
+    line-height: 1.4;
+  }`;
+
+export default Greet;
