@@ -36,7 +36,7 @@ const App = () => {
         onSubmit={(e) => {
           submitHandler(e);
         }}
-        className='flex justify-center items-center gap-6 w-full p-10 bg-slate-100 lg:flex-row flex-col'
+        className='flex justify-center items-center gap-6 w-full lg:p-10 p-5 bg-slate-100 lg:flex-row flex-col'
       >
         <input
           onChange={(e) => {
@@ -47,7 +47,7 @@ const App = () => {
           id='limit'
           value={limit}
           min='1'
-          className='border-4 p-4 rounded-full text-2xl bg-white lg:w-1/2 w-3/4 focus:outline-none focus:border focus:border-black focus:shadow-[-5px_-5px_0px_black]  border-black transition'
+          className='border-4 p-4 rounded-full text-2xl bg-white lg:w-1/2 w-full focus:outline-none focus:border focus:border-black focus:shadow-[-5px_-5px_0px_black]  border-black transition'
         />
         <button
           onClick={generateImages}

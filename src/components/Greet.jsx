@@ -4,9 +4,9 @@ import cardPic from '../assets/cardpic.jpg'
 
 const Greet = () => {
   return (
-    <StyledWrapper>
+    <StyledWrapper className='w-full items-center flex justify-center'>
       <div className="card">
-        <img src={cardPic} alt=""  className='h-full'/>
+        <img src={cardPic} alt=""  className='h-full w-full'/>
         <div className="card__content flex flex-col justify-center gap-5 p-15">
           <p className="card__title text-[#333] text-3xl">Fantastic Gallery</p>
           <p className="card__description text-[#777] text-xl">A website to generate and display a dynamic gallery of random images fetched from the Picsum Photos API.</p>
@@ -72,6 +72,26 @@ const StyledWrapper = styled.div`
   .card__description {
     margin: 10px 0 0;
     line-height: 1.4;
-  }`;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+      height: auto;
+    }
+
+    .card__content {
+      padding: 10px;
+    }
+
+    .card__title {
+      font-size: 1.5rem;
+    }
+
+    .card__description {
+      font-size: 1rem;
+    }
+  }
+`;
 
 export default Greet;
