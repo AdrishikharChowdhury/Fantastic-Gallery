@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion as Motion } from 'framer-motion';
-import PicLoader from './PicLoader';
+import PicLoader from '../Loaders/PicLoader';
 
 const PhotoCard = ({ download_url, author, url, index }) => {
   const [isPhotoLoaded, setIsPhotoLoaded] = useState(false);
@@ -11,16 +11,10 @@ const PhotoCard = ({ download_url, author, url, index }) => {
 
   return (
     <Motion.div
-      className='bg-white sm:p-6 p-3 flex flex-col justify-center items-center gap-5 shadow-2xl lg:mx-4 lg:my-2 mx-2 my-2 hover:border-2'
+      className='bg-white sm:p-6 p-3 flex flex-col justify-center items-center gap-5 shadow-2xl lg:mx-4 lg:my-2 mx-2 my-2 hover:border-2 cursor-pointer'
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.2 }}
-      whileHover={{
-        y: -10,
-      }}
-      whileTap={{
-        scale: 0.9,
-      }}
     >
       {!isPhotoLoaded && <PicLoader />}
       <img

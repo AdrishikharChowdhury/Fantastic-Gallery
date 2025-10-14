@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import PhotoCard from './PhotoCard';
-import Greet from './Greet';
-import Loader from './Loader';
+import PhotoCard from '../other/PhotoCard';
+import Greet from '../other/Greet';
+import Loader from '../Loaders/Loader';
 
 const Gallery = ({ data,setisLoading,isLoading }) => {
 
@@ -16,7 +16,7 @@ const Gallery = ({ data,setisLoading,isLoading }) => {
     }, [isLoading, setisLoading]);
 
   return (
-    <div className='flex-grow bg-slate-50 w-full flex flex-wrap justify-center items-center lg:gap-5 gap-1 lg:py-10 py-5'>
+    <div className='flex-grow w-full flex flex-wrap justify-center items-center lg:gap-5 gap-1 lg:py-10 py-5'>
       {isLoading ? <Loader /> 
       : 
       (data.length > 0 ? (

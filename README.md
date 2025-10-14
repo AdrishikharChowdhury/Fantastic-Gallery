@@ -14,6 +14,7 @@ A React-based web app to generate and display a dynamic gallery of random images
 - [💡 Usage](#usage)
 - [🤝 Contributing](#contributing)
 - [📄 License](#license)
+- [✍️ Author](#author)
 
 ---
 
@@ -24,6 +25,7 @@ A React-based web app to generate and display a dynamic gallery of random images
 - 🎨 Displays images in a responsive gallery layout
 - 🪄 Stagger animation for photo cards appearing one by one.
 - ⏳ Improved image loading with a loader for each photo.
+- ✨ **Interactive Input**: The input field for selecting the number of images is now more interactive with hover effects, focus styling, and a disabled state for the decrement button when the count is at its minimum.
 -  navbar Simple Navbar with a FontAwesome camera icon and project title
 - 🦶 Footer with social media links (Instagram, GitHub, Portfolio).
 - ⚛️ Built with React functional components and hooks
@@ -34,7 +36,7 @@ A React-based web app to generate and display a dynamic gallery of random images
 
 ## 🎥 Demo
 
- [Chhobighor]{}
+ [Chhobighor](https://chhobighor.netlify.app/)
 
 ---
 
@@ -52,36 +54,42 @@ A React-based web app to generate and display a dynamic gallery of random images
 ## 📂 Project Structure
 
 ```
-
-my-react-app/
-│
-├── public/                      \# Static assets like index.html, favicon, etc.
+/
+├── public/                      # Static assets like index.html, favicon, etc.
 │
 ├── src/
-│   ├── assets/                  \# Images, fonts, icons (if any)
+│   ├── assets/                  # Images, fonts, icons
 │   │
-│   ├── components/              \# Reusable components
-│   │   ├── Navbar.jsx           \# Navbar with FontAwesome icon
-│   │   ├── Gallery.jsx          \# Gallery displaying images
-│   │   ├── PhotoCard.jsx        \# Individual photo card with animation
-│   │   ├── Loader.jsx           \# Main loader for the gallery
-│   │   ├── PicLoader.jsx        \# Loader for individual images
-│   │   └── Footer.jsx           \# Footer with social media links
+│   ├── components/              # Reusable components
+│   │   ├── Generate/            # Components for the generate section
+│   │   │   ├── Button.jsx
+│   │   │   ├── Generate.jsx
+│   │   │   └── Input.jsx
+│   │   ├── Home/                # Components for the home page
+│   │   │   ├── Background.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Gallery.jsx
+│   │   │   ├── Home.jsx
+│   │   │   └── Navbar.jsx
+│   │   ├── Loaders/             # Loader components
+│   │   │   ├── Loader.jsx
+│   │   │   └── PicLoader.jsx
+│   │   └── other/               # Other components
+│   │       ├── Greet.jsx
+│   │       └── PhotoCard.jsx
 │   │
-│   ├── services/                \# API calls (optional organization)
+│   ├── hooks/                   # Custom hooks
+│   │   └── useAxios.jsx
 │   │
-│   ├── styles/                  \# Tailwind or global styles
-│   │
-│   ├── App.jsx                  \# Root app component: state, logic, fetch
-│   ├── main.jsx                 \# App entry and ReactDOM.render
-│   └── index.css                \# Global styles and Tailwind imports
+│   ├── App.jsx                  # Root app component
+│   ├── main.jsx                 # App entry point
+│   └── index.css                # Global styles
 │
-├── tailwind.config.js           \# Tailwind CSS configuration
-├── vite.config.js               \# Vite build configuration
-├── package.json                \# Dependencies and scripts
-├── README.md                   \# Project documentation (this file)
-└── .gitignore                  \# Files/folders to ignore in git
-
+├── eslint.config.js             # ESLint configuration
+├── vite.config.js               # Vite build configuration
+├── package.json                 # Dependencies and scripts
+├── README.md                    # Project documentation
+└── .gitignore                   # Files/folders to ignore in git
 ```
 
 ---
@@ -153,5 +161,11 @@ This project is released under the MIT License.
 ## 📫 Contact
 
 For questions, feel free to reach out.
+
+---
+
+## ✍️ Author
+
+- **Adrishikhar Chowdhury** - [https://github.com/AdrishikharChowdhury](https://github.com/AdrishikharChowdhury)
 
 ---

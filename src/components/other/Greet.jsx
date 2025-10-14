@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import cardPic from '../assets/cardpic.jpg'
+import cardPic from '../../assets/cardpic.jpg'
 
 const Greet = () => {
   return (
